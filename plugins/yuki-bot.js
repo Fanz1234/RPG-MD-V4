@@ -11,9 +11,9 @@ contextInfo: { externalAdReply :{
                         mediaType: 2,
                         description: 'anu',
                         title: global.titlebot,
-                        body: '⚘ ᴄʀᴇᴀᴛᴇ ʙʏ ᴹᴿ᭄ King Of Bear ×፝֟͜×',          previewType: 0,
+                        body: '⚘ ᴄʀᴇᴀᴛᴇ ʙʏ ᴹᴿ᭄ Fanz ×፝֟͜×',          previewType: 0,
                         thumbnail: await (await fetch(pp)).buffer(),
-                        sourceUrl: 'https://youtu.be/pwLZpdfO8AU'
+                        sourceUrl: 'https://youtu.be/'
                       }}
 })
 }
