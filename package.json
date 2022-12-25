@@ -1,7 +1,7 @@
 {
-  "name": "newscbot2022",
+  "name": "FanzBotzz",
   "version": "1.0.0",
-  "description": "<p align=\"center\"> <img src=\"https://telegra.ph/file/6ab4daac226292a112540.jpg\" alt=\"YUKI BOT\" width=\"500\"/>",
+  "description": "<p align=\"center\"> <img src=\"https://telegra.ph/file/e83ba3c272120b6b3ed05.jpg\" alt=\"FanzBotzz\" width=\"500\"/>",
   "main": "index.js",
   "type": "module",
   "directories": {
@@ -28,7 +28,7 @@
   ],
   "homepage": "https://github.com/saipulanuar/RPG-MD-V5",
   "author": {
-    "name": "Saipul Anuar"
+    "name": "Fanz"
   },
   "repository": {
     "type": "git",
