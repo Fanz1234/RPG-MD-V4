@@ -1,22 +1,39 @@
-import { tiktokdl, tiktokdlv2, tiktokdlv3 } from '@bochilteam/scraper'
-import fetch from 'node-fetch'
 
-let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
+let handler = async (m, { conn, usedPrefix, text, args, command }) => {
+	
+if (!args[0]) return m.reply(`masukan kak @${m.sender.split(`@`)[0]} link tiktok contoh\n\n.tiktok https://vt.tiktok.com/ZSR7MJgwa/`)
+	
+let tiktok = `
+${htki}  📺 Tiktok Downloader 🔎  ${htka}
 
-  const { author: { nickname }, video, description } = await tiktokdl(args[0])
-        .catch(async _ => await tiktokdlv2(args[0]))
-        .catch(async _ => await tiktokdlv3(args[0]))
-    const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd
-    if (!url) throw 'Can\'t download video!'
-    conn.sendHydrated(m.chat, `${htki} ᴛɪᴋᴛᴏᴋ ᴡᴍ ${htka}`, `➔ ɴɪᴄᴋɴᴀᴍᴇ ${nickname}${description ? `\n➔ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ:\n${description}` : ''}`, await (await fetch(url)).buffer(),
-        url, '🌎 s ᴏ ᴜ ʀ ᴄ ᴇ', null, null, [
-        ['ᴅᴏɴᴀꜱɪ', `.donasi`],
-        ['ᴀᴜᴅɪᴏ', `.tiktokaudio ${args}`],
-        [null, null]], m)
+Silakan pilih Tiktok Downloader di tombol di bawah...
+
+*Teks yang anda kirim:* ${args[0]}
+`
+// yang hapus nomor developer mudah-mudahan banyak crash
+const sections = [
+   {
+	title: `${htjava} Tiktok Downloader Work✦-------`,
+	rows: [
+        {title: "✎ • downloader tiktok V1", rowId: `.vidio ${args[0]}`, description: 'download Vidio tiktok Kamu di FanzBotzz' },
+        {title: "✎ • downloader tiktok V2", rowId: `.ttkneoxr ${args[0]}`, description: 'download Vidio tiktok Kamu di FanzBotzz' },
+        ]
+    },
+]
+
+const listMessage = {
+  text: tiktok,
+  footer: botdate,
+  title: wm,
+  buttonText: "Click Here!",
+  sections
 }
-handler.help = ['tiktok', 'tiktok', 'tiktokdl'].map(v => v + ' <url>')
+await conn.sendMessage(m.chat, listMessage, { quoted: fakes, mentions: await conn.parseMention(tiktok), contextInfo:{ forwardingScore: 99999, isForwarded: true }})
+
+}
+
+handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^(tik(tok)?(tok)?(dl)?)$/i
+handler.command = /^(tt|tiktok)$/i
 
 export default handler
