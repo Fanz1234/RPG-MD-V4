@@ -19,10 +19,10 @@ contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: nul
 title: 'VIDEO',
 body: 'ᴹᴿ᭄ Fanz ×፝֟͜×',         
 previewType: 0, thumbnail: await (await fetch('https://telegra.ph/file/eeb0490126df245045890.jpg')).buffer(),
-sourceUrl: `https://youtu.be/pwLZpdfO8AU`}}})
+sourceUrl: `https://youtu.be/`}}})
 let res = await fetch("https://api.dhamzxploit.my.id/api/ytplaymp4?text="+text)
 let json = await res.json()
-conn.sendFile(m.chat, json.result.url, 'error.mp4', `_ᴹᴿ᭄ King Of Bear ×፝֟͜×_`, m)}
+conn.sendFile(m.chat, json.result.url, 'error.mp4', `_ᴹᴿ᭄ Fanz ×፝֟͜×_`, m)}
 }catch(e){
 m.reply('*[❗INFO❗] ERROR,TIDAK DAPAT MENCARI LAGU TERSEBUT*')
 console.log(e)
