@@ -7,9 +7,9 @@ if (command == 'play.1') {
 conn.reply(m.chat, `*_⏳Wait,Audio Sedang Di Proses..._⏳*`, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
 title: 'AUDIO',
-body: 'YukiBot',         
-previewType: 0, thumbnail: await (await fetch(`https://i.ibb.co/jfZVKmC/babi2.jpg`)).buffer(),
-sourceUrl: `https://youtu.be/pwLZpdfO8AU`}}})
+body: 'FanzBotzz',         
+previewType: 0, thumbnail: await (await fetch(`https://telegra.ph/file/e83ba3c272120b6b3ed05.jpg`)).buffer(),
+sourceUrl: `https://youtu.be/`}}})
 let res = await fetch("https://api.dhamzxploit.my.id/api/ytplaymp3?text="+text)
 let json = await res.json()
 conn.sendFile(m.chat, json.result.url, 'error.mp3', null, m, false, { mimetype: 'audio/mp4' })}
@@ -17,8 +17,8 @@ if (command == 'play.2') {
 conn.reply(m.chat, `*_⏳ Wait,Video Sedang Di Proses...⏳_*`, m, {
 contextInfo: { externalAdReply :{ mediaUrl: null, mediaType: 1, description: null, 
 title: 'VIDEO',
-body: 'ᴹᴿ᭄ King Of Bear ×፝֟͜×',         
-previewType: 0, thumbnail: await (await fetch('https://telegra.ph/file/6ab4daac226292a112540.jpg')).buffer(),
+body: 'ᴹᴿ᭄ Fanz ×፝֟͜×',         
+previewType: 0, thumbnail: await (await fetch('https://telegra.ph/file/eeb0490126df245045890.jpg')).buffer(),
 sourceUrl: `https://youtu.be/pwLZpdfO8AU`}}})
 let res = await fetch("https://api.dhamzxploit.my.id/api/ytplaymp4?text="+text)
 let json = await res.json()
